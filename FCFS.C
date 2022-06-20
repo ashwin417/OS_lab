@@ -9,7 +9,7 @@ int main()
 	for(i=0;i<n;i++)
 		scanf("%d%d%d",&prc[i],&At[i],&Bt[i]);
 
-//Sorting according to burst time (selection sort)
+//Sorting according to arrival time (selection sort)
 	int t,pos;
 	for(i=0;i<n;i++)
 	{
