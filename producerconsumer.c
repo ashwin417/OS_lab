@@ -3,11 +3,9 @@ int counter = 0,in = 0, out = 0, Buffer_size = 10;
 int buffer[10];
 void producer()
 {
-	printf("\nEnter item");
-	int next_produced;
-	scanf("%d",&next_produced);
+	int next_produced=0;
 	while( counter == Buffer_size);
-	buffer[in] == next_produced;
+	buffer[in] = ++next_produced;
 	in = (in + 1) % Buffer_size;
 	counter++;
 	
@@ -24,7 +22,7 @@ void consumer()
 
 int main()
 {
-int ch;
+int ch,k=0;
 
 while(1)
 	{
@@ -38,14 +36,19 @@ while(1)
 				}
 				else
 				{ 
-				 printf("Producer\n");producer();
-				 } 
-				 break;
-		case 2 : {
+				 printf("Producer produces the item %d\n",++k);
+				 producer();
+				} 
+				break;
+		case 2 :{
 			if(counter == 0)
-			{printf("Buffer empty\n");}
-			else{ printf("Consumer\n"); consumer();
-			}}break;
+				{
+				printf("Buffer empty\n");}
+			else{ 
+				printf("Consumer Consumed the item %d\n",k--); consumer();
+				}
+			}
+			break;
 		default : printf("Bad Input\n"); 
 	}
 	}
