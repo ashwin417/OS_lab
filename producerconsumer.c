@@ -23,10 +23,9 @@ void consumer()
 int main()
 {
 int ch,k=0;
-
-while(1)
+while(ch!=3)
 	{
-	printf("\n1. Producer\n2. Consumer\n Enter option:");
+	printf("\n1. Producer\n2. Consumer\n3. Exit \nEnter option: ");
 	scanf("%d",&ch);
 	switch(ch)
 	{
