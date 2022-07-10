@@ -79,7 +79,7 @@ int main()
 //Sorting according to process number
 
 
-	for(i=0;i<n;i++)
+/*	for(i=0;i<n;i++)
 	{
 	pos = i;
 		for(j=i+1;j<n;j++)
@@ -108,7 +108,7 @@ int main()
 	Ta[i]=Ta[pos];
 	Ta[pos]=temp;
 	
-	}	
+	}	*/
 	
 //Displaying the table with Waiting time and turn around time
 	printf("\nPno\tWT\tTA");
