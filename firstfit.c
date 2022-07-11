@@ -55,7 +55,7 @@ void print(int p[],int m[], int allocate[], int n)
 	{
 	printf(" %d\t%d\t\t",i+1,p[i]);
 	if(allocate[i]!=-1)
-		printf("%d\n",allocate[i]);
+		printf("%d\n",allocate[i]+1);
 	else
 		printf("Not Allocated\n");
 	
