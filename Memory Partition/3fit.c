@@ -1,3 +1,5 @@
+//This program has bugs!!!!!!!!!!!
+
 #include<stdio.h>
 void worstfit(int [],int [],int,int);
 void firstfit(int [],int [],int,int);
