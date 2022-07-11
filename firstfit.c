@@ -1,5 +1,5 @@
 #include<stdio.h>
-void firstfit(int [],int [],int,int);
+void firstfit(int [],int,int);
 void print(int [],int [], int[], int);
 int main()
 {
@@ -44,10 +44,10 @@ void firstfit(int mempar[], int prcsize[], int nm, int np)
 			}
 		}
 	}
-	print(prcsize,mempar,allocate,np);
+	print(prcsize,allocate,np);
 }
 
-void print(int p[],int m[], int allocate[], int n)
+void print(int p[], int allocate[], int n)
 {
 
 	printf("\nFirst Fit\nPNo\tPrc size\tBlockno\n");
