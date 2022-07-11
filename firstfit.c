@@ -1,6 +1,6 @@
 #include<stdio.h>
-void firstfit(int [],int,int);
-void print(int [],int [], int[], int);
+void firstfit(int [],int [], int,int);
+void print(int [], int[], int);
 int main()
 {
 	int np,nm,i;
