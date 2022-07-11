@@ -26,9 +26,6 @@ int main()
 void firstfit(int mempar[], int prcsize[], int nm, int np)
 {
 	int i,j;
-	int temp[nm];
-	for(i=0;i<nm;i++)
-		temp[i]=mempar[i];
 	int allocate[np];
 	for(i=0;i<np;i++)
 		allocate[i]=-1;
