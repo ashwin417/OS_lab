@@ -10,7 +10,7 @@ char path[100];
 struct stat sfile;
 printf("Enter the name of a file to check: \n");
 scanf("%s",path);
-stat(path, &sfile	);
+stat(path, &sfile);
 statfile(sfile);
 
 return 0;
