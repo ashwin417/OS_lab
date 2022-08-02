@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int i,burst=0, n,pos,j,t;
+	int i,n,pos,j,t;
 	printf("Enter the number of processes : ");
 	scanf("%d",&n);
 	int prc[n], Bt[n], At[n];
@@ -15,7 +15,7 @@ int main()
 	pos = i;
 		for(j=i+1;j<n;j++)
 		{
-			if(Bt[j]<=Bt[pos])
+			if(Bt[j]<Bt[pos])
 				{
 				pos = j;
 				}
@@ -41,22 +41,19 @@ int main()
 	{
 	if(i==0)
 	{
-		Wt[i]=At[i];
+		Wt[i]=0;
 	}
 	else
 	{
-		Wt[i]=burst-At[i];
+		Wt[i] =  Bt[i-1] + Wt[i-1] ;
 	}
-	burst+= Bt[i];
 	}
 	
 //Turn Around Time Calculation 	
 	int Ta[n];
-	int temp=0;
 	for(int i=0;i<n;i++)
 	{
-		temp+=Bt[i];
-		Ta[i]=temp-At[i];
+		Ta[i]=Bt[i]+At[i];
 	}
 	
 //Displaying the table with Waiting time and turn around time
@@ -86,6 +83,5 @@ int main()
 	
 	return 0;
 }
-
 
 
