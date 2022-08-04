@@ -1,5 +1,6 @@
 #include<stdio.h>
 void FIFO(int prs[], int n, int frame);
+void print(int [],int);
 
 void main()
 {
@@ -19,7 +20,10 @@ void FIFO(int prs[], int n, int frame)
 	{
 		int pagefault = 0, hit=0,i,j,s;
 		int temp[frame];
-		printf("\nValues\tFrame1\tFrame2\tFrame3\n");
+		printf("\nValues\t");
+		for(i=1;i<=f;i++)
+			printf("Frame%d\t",i);
+		printf("\n");
 		for(i= 0; i< frame; i++)
 		{
 			temp[i] = -1;
