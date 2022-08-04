@@ -19,6 +19,7 @@ void FIFO(int prs[], int n, int frame)
 	{
 		int pagefault = 0, hit=0,i,j,s;
 		int temp[frame];
+		printf("\nValues\tFrame1\tFrame2\tFrame3\n");
 		for(i= 0; i< frame; i++)
 		{
 			temp[i] = -1;
@@ -28,6 +29,7 @@ void FIFO(int prs[], int n, int frame)
 			s = 0;
 			for(j = 0; j < frame; j++)
 			{
+				
 				if(prs[i] == temp[j])
 				{
 					s++;
@@ -44,11 +46,19 @@ void FIFO(int prs[], int n, int frame)
 				temp[(pagefault - 1) % frame] = prs[i];
 			}
 			printf("\n");
+			printf("%d\t",prs[i]);
 			for(j = 0; j < frame; j++)
 			{ 
-					printf("%d\t", temp[j]);
+				if(temp[j]!=-1)
+					{
+						printf("%d\t", temp[j]);
+					}
+				else
+					{
+						printf("\t");
+					}
 			}
 		} 
-		printf("\nTotal Page Faults:\t%d\n", pagefault);
+		printf("\nTotal Page Faults: %d\n", pagefault);
 	}
 		
