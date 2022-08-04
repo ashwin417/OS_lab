@@ -27,15 +27,15 @@ void LFU(int pr[], int n, int f)
 	for(i=0;i<n;i++)
 	{
 		printf("\n");
-		printf("%d\t",pr[i]);
+		printf("%d =>\t",pr[i]);
 		flag=0;
 		for(j=0;j<n;j++)
 		{
-			if(pr[i]==frames[i])
+			if(pr[i]==frames[j])
 			{
 				flag = 1;
-				freq[i]++;
-				printf("\n");
+				freq[j]++;
+				printf("\t Hit!!!\n");
 				break;
 			}
 		}
@@ -72,6 +72,11 @@ void print(int frames[], int f)
 {
 	int j;
 	for(j=0;j<f;j++)
-		printf("%d\t",frames[j]);
+	{	
+		if(frames[j]!=-1)
+			printf("%d\t",frames[j]);
+		else
+			printf("\t");
+	}
 	printf("\n");
 }
