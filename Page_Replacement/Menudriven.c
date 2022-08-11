@@ -64,7 +64,7 @@
 		 for(i= 0; i< n; i++)
 		 {
 			 s = 0;
-			 printf("\n%d\t",prs[i]);
+			 printf("\n%d=>\t",prs[i]);
 			 for(j = 0; j < frame; j++)
 			 {
 				 if(temp[j]==prs[i])
@@ -180,7 +180,7 @@
 		 frames[i]=-1;
 	 for(i=0;i<n;i++)
 	 {
-		 printf("\n");
+		//printf("\n");
 		 printf("%d =>\t",pr[i]);
 		 flag=0;
 		 for(j=0;j<n;j++)
